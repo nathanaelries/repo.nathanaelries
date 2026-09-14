@@ -1,0 +1,14 @@
+{
+    "name": "Prism",
+    "plugin": "plugin.video.prism",
+    "priority": 50,
+    "is_resolvable": "false",
+    "assert": {
+        "play_movie": ["tmdb"],
+        "play_episode": ["tmdb", "season", "episode"]
+    },
+    "play_movie": "plugin://plugin.video.prism/?action=tmdbHelper&forceresumecheck=true&action_args=%7B%22item_type%22%3A%22movie%22%2C%22tmdb_id%22%3A{tmdb}%7D",
+    "play_episode": "plugin://plugin.video.prism/?action=tmdbHelper&smartPlay=false&source_select=false&forceresumecheck=true&tmdb_external_play=true&action_args=%7B%22item_type%22%3A%22tv%22%2C%22tmdb_id%22%3A{tmdb}%2C%22season%22%3A{season}%2C%22episode%22%3A{episode}%7D",
+    "search_movie": "plugin://plugin.video.prism/?action=moviesSearchResults&action_args={clearname_url}",
+    "search_episode": "plugin://plugin.video.prism/?action=showsSearchResults&action_args={clearname_url}"
+}
